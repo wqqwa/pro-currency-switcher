@@ -1,0 +1,1392 @@
+# Pro Currency Switcher - Translation Template
+# Copyright (C) 2026 Wuzhou Dentsu Advertising Co., Ltd.
+# This file is distributed under the GPLv2 license.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Pro Currency Switcher 6.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-03 15:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+#: pro-currency-switcher.php:241
+msgid "货币代码不能为空"
+msgstr ""
+
+#: pro-currency-switcher.php:256
+msgid "货币切换成功"
+msgstr ""
+
+#: pro-currency-switcher.php:262
+msgid "无效的货币代码"
+msgstr ""
+
+#: pro-currency-switcher.php:326
+msgid "Pro Currency Switcher 已升级到 v6.0.0！重大更新：PSR-4架构重构、42个开发者钩子、WooCommerce Blocks支持、206种货币。请查看设置页面。"
+msgstr ""
+
+#: pro-currency-switcher.php:364
+#, php-format
+msgid "[PCS] 插件从 v%s 升级到 v%s"
+msgstr ""
+
+#: pro-currency-switcher.php:446
+msgid "查看设置"
+msgstr ""
+
+#: pro-currency-switcher.php:599
+msgid "每30分钟"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:31
+msgid "梧州电通广告货币显示设置"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:32
+msgid "梧州电通广告货币显示"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:50
+msgid "基本设置"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:58
+msgid "基准货币"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:67
+msgid "启用货币"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:76
+msgid "自动检测货币"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:85
+msgid "汇率API提供商"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:93
+msgid "API密钥"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:112
+msgid "更新中..."
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:113 includes/Admin/AdminSettings.php:381
+msgid "手动更新"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:114 includes/Admin/AdminSettings.php:390
+msgid "更新所有汇率"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:115
+msgid "保存中..."
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:116 includes/Admin/AdminSettings.php:428
+msgid "保存"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:117
+msgid "汇率更新成功！"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:118
+msgid "更新失败: "
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:119
+msgid "所有汇率更新成功！"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:120
+msgid "请输入有效的汇率数值"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:121
+msgid "汇率保存成功！"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:122
+msgid "保存失败: "
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:126
+msgid "梧州电通广告有限公司货币显示设置"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:134
+#: includes/Admin/EnterpriseSettingsPage.php:513
+msgid "保存设置"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:237
+msgid "配置货币切换器的基本设置"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:250
+msgid "选择作为基准的货币"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:279
+msgid "选择在前端显示的货币（两岸三地和东南亚货币已高亮显示）"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:293
+msgid "根据访客位置自动推荐货币"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:299
+msgid "ExchangeRate-API (免费)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:300
+msgid "Fixer.io (需要API密钥)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:301
+msgid "手动设置"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:315
+msgid "如果需要使用付费API服务，请在此输入API密钥"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:321
+msgid "系统状态"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:324
+msgid "当前基准货币:"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:328
+msgid "启用货币数量:"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:332
+msgid "WordPress版本:"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:336
+msgid "插件版本:"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:361
+msgid "汇率管理"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:362
+msgid "当前汇率数据将自动从配置的API获取。"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:367
+msgid "货币对"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:368
+msgid "汇率"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:369
+msgid "最后更新"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:370 includes/Admin/AdminSettings.php:410
+msgid "操作"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:391 includes/Admin/AdminSettings.php:401
+msgid "手动设置汇率"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:402
+msgid "您可以手动设置每种货币的汇率："
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:407
+msgid "目标货币"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:408
+msgid "当前汇率"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:409
+msgid "新汇率"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:459
+msgid "从未更新"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:471 includes/Admin/AdminSettings.php:488
+#: includes/Admin/AdminSettings.php:508
+#: includes/Admin/EnterpriseSettingsPage.php:47
+msgid "权限不足"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:480
+msgid "更新失败"
+msgstr ""
+
+#. translators: %d: number of rates updated
+#: includes/Admin/AdminSettings.php:496
+#, php-format
+msgid "成功更新 %d 个汇率"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:500
+msgid "所有汇率更新失败"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:517
+msgid "保存失败"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:633
+msgid "人民币 - Chinese Yuan (中国大陆)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:634
+msgid "新台币 - New Taiwan Dollar (中国台湾)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:635
+msgid "港币 - Hong Kong Dollar (中国香港)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:636
+msgid "澳门元 - Macau Pataca (中国澳门)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:637
+msgid "日元 - Japanese Yen (日本)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:638
+msgid "韩元 - South Korean Won (韩国)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:639
+msgid "新加坡元 - Singapore Dollar (新加坡)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:640
+msgid "马来西亚林吉特 - Malaysian Ringgit (马来西亚)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:641
+msgid "泰铢 - Thai Baht (泰国)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:642
+msgid "印尼盾 - Indonesian Rupiah (印度尼西亚)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:643
+msgid "菲律宾比索 - Philippine Peso (菲律宾)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:644
+msgid "越南盾 - Vietnamese Dong (越南)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:645
+msgid "印度卢比 - Indian Rupee (印度)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:646
+msgid "孟加拉塔卡 - Bangladeshi Taka (孟加拉)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:647
+msgid "巴基斯坦卢比 - Pakistani Rupee (巴基斯坦)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:648
+msgid "斯里兰卡卢比 - Sri Lankan Rupee (斯里兰卡)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:649
+msgid "尼泊尔卢比 - Nepalese Rupee (尼泊尔)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:650
+msgid "缅甸元 - Myanmar Kyat (缅甸)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:651
+msgid "柬埔寨瑞尔 - Cambodian Riel (柬埔寨)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:652
+msgid "老挝基普 - Lao Kip (老挝)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:653
+msgid "文莱元 - Brunei Dollar (文莱)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:656
+msgid "美元 - United States Dollar (美国)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:657
+msgid "加元 - Canadian Dollar (加拿大)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:658
+msgid "墨西哥比索 - Mexican Peso (墨西哥)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:659
+msgid "巴西雷亚尔 - Brazilian Real (巴西)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:660
+msgid "阿根廷比索 - Argentine Peso (阿根廷)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:661
+msgid "智利比索 - Chilean Peso (智利)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:662
+msgid "哥伦比亚比索 - Colombian Peso (哥伦比亚)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:663
+msgid "秘鲁新索尔 - Peruvian Sol (秘鲁)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:666
+msgid "欧元 - Euro (欧盟)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:667
+msgid "英镑 - British Pound (英国)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:668
+msgid "瑞士法郎 - Swiss Franc (瑞士)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:669
+msgid "俄罗斯卢布 - Russian Ruble (俄罗斯)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:670
+msgid "瑞典克朗 - Swedish Krona (瑞典)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:671
+msgid "挪威克朗 - Norwegian Krone (挪威)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:672
+msgid "丹麦克朗 - Danish Krone (丹麦)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:673
+msgid "波兰兹罗提 - Polish Zloty (波兰)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:674
+msgid "捷克克朗 - Czech Koruna (捷克)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:675
+msgid "匈牙利福林 - Hungarian Forint (匈牙利)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:676
+msgid "罗马尼亚列伊 - Romanian Leu (罗马尼亚)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:677
+msgid "保加利亚列弗 - Bulgarian Lev (保加利亚)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:678
+msgid "克罗地亚库纳 - Croatian Kuna (克罗地亚)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:679
+msgid "土耳其里拉 - Turkish Lira (土耳其)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:680
+msgid "乌克兰格里夫纳 - Ukrainian Hryvnia (乌克兰)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:683
+msgid "澳元 - Australian Dollar (澳大利亚)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:684
+msgid "新西兰元 - New Zealand Dollar (新西兰)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:685
+msgid "南非兰特 - South African Rand (南非)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:686
+msgid "埃及镑 - Egyptian Pound (埃及)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:687
+msgid "尼日利亚奈拉 - Nigerian Naira (尼日利亚)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:688
+msgid "肯尼亚先令 - Kenyan Shilling (肯尼亚)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:689
+msgid "加纳塞地 - Ghanaian Cedi (加纳)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:690
+msgid "摩洛哥迪拉姆 - Moroccan Dirham (摩洛哥)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:691
+msgid "阿尔及利亚第纳尔 - Algerian Dinar (阿尔及利亚)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:692
+msgid "突尼斯第纳尔 - Tunisian Dinar (突尼斯)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:695
+msgid "沙特里亚尔 - Saudi Riyal (沙特阿拉伯)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:696
+msgid "阿联酋迪拉姆 - UAE Dirham (阿联酋)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:697
+msgid "卡塔尔里亚尔 - Qatari Riyal (卡塔尔)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:698
+msgid "科威特第纳尔 - Kuwaiti Dinar (科威特)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:699
+msgid "阿曼里亚尔 - Omani Rial (阿曼)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:700
+msgid "巴林第纳尔 - Bahraini Dinar (巴林)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:701
+msgid "约旦第纳尔 - Jordanian Dinar (约旦)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:702
+msgid "黎巴嫩镑 - Lebanese Pound (黎巴嫩)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:703
+msgid "以色列新谢克尔 - Israeli New Shekel (以色列)"
+msgstr ""
+
+#: includes/Admin/AdminSettings.php:712
+msgid "货币切换器设置已保存！"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:33
+#: includes/Admin/EnterpriseSettingsPage.php:34
+#: includes/Admin/EnterpriseSettingsPage.php:149
+msgid "高级设置"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:51
+msgid "安全验证失败"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:153
+msgid "设置已保存。"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:158
+msgid "自定义汇率"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:159
+msgid "汇率加价"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:160
+msgid "价格取整"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:161
+msgid "自动检测"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:215
+msgid "选择\"自动\"使用实时汇率API获取最新汇率（每30分钟更新）。选择\"手动\"可以自行设定固定汇率。"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:225
+#: includes/Admin/EnterpriseSettingsPage.php:318
+#: includes/Admin/EnterpriseSettingsPage.php:407
+msgid "货币"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:226
+msgid "汇率模式"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:227
+msgid "汇率值"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:228
+msgid "当前实时汇率"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:229
+msgid "状态"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:247
+msgid "自动（实时汇率）"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:248
+msgid "手动（固定汇率）"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:265
+msgid "手动"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:265
+msgid "实时"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:275
+msgid "保存汇率设置"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:277
+msgid "确定重置所有汇率为实时汇率？"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:278
+msgid "全部重置为实时汇率"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:308
+msgid "在实时汇率基础上加价，用于覆盖汇率转换成本和支付手续费。例如：加价2%表示在实时汇率基础上增加2%。"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:319
+msgid "加价类型"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:320
+msgid "加价值"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:321
+msgid "示例效果"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:341
+msgid "无加价"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:342
+msgid "百分比 (%)"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:343
+msgid "固定金额"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:358
+msgid "保存加价设置"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:359
+msgid "输入全局加价百分比（如2表示加2%）"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:359
+msgid "全局设置百分比"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:388
+msgid "设置价格取整规则，让转换后的价格更美观。例如：$19.99 → ¥138.00（四舍五入到整数）。可以使用预设模板快速设置。"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:396
+msgid "快速预设:"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:408
+msgid "取整规则"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:409
+msgid "取整值"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:410
+msgid "小数精度"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:411
+msgid "示例"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:427
+#: includes/Core/PriceRoundingManager.php:134
+msgid "不取整"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:428
+msgid "向上取整"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:429
+msgid "向下取整"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:430
+msgid "四舍五入"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:431
+msgid "固定精度"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:451
+msgid "保存取整设置"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:452
+msgid "全部重置"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:480
+msgid "自动检测用户货币"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:484
+msgid "根据用户IP地址自动检测并切换到对应货币"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:486
+msgid "启用后，新访客将自动看到其所在国家/地区的货币。用户仍可手动切换。"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:490
+msgid "缓存兼容模式"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:492
+msgid "已启用"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:493
+msgid "插件已内置缓存兼容机制，支持WP Super Cache、W3 Total Cache、CDN等。通过Cookie + JavaScript动态更新实现。"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:497
+msgid "当前汇率状态"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:506
+#, php-format
+msgid "最后更新: %s"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:506
+msgid "暂无汇率数据"
+msgstr ""
+
+#: includes/Admin/EnterpriseSettingsPage.php:507
+msgid "汇率每30分钟自动更新一次。"
+msgstr ""
+
+#: includes/Admin/PaymentSettingsPage.php:31
+msgid "支付方式设置"
+msgstr ""
+
+#: includes/Admin/PaymentSettingsPage.php:32
+msgid "支付方式"
+msgstr ""
+
+#: includes/Admin/PaymentSettingsPage.php:46
+msgid "支付方式设置已保存。"
+msgstr ""
+
+#: includes/Admin/PaymentSettingsPage.php:49
+msgid "已恢复默认支付方式设置。"
+msgstr ""
+
+#: includes/Frontend/CurrencySelector.php:74
+#: includes/Frontend/CurrencySelectorStyles.php:186
+msgid "货币:"
+msgstr ""
+
+#: includes/Frontend/CurrencySelectorStyles.php:158
+msgid "选择货币"
+msgstr ""
+
+#: includes/Core/CacheCompatHandler.php:196
+msgid "Invalid price data"
+msgstr ""
+
+#: includes/Core/WooCommerceIntegration.php:150
+msgid "订单货币"
+msgstr ""
+
+#: includes/Core/WooCommerceIntegration.php:153
+#, php-format
+msgid "汇率: 1 %s = %s %s (%s)"
+msgstr ""
+
+#: includes/Core/WooCommerceIntegration.php:212
+#, php-format
+msgid "订单货币: %s %s (%s)"
+msgstr ""
+
+#: includes/Core/ProductPricingManager.php:71
+msgid "多币种定价"
+msgstr ""
+
+#: includes/Core/ProductPricingManager.php:72
+msgid "为每种货币设置独立价格。留空则使用汇率自动转换。"
+msgstr ""
+
+#: includes/Core/ProductPricingManager.php:89
+msgid "留空=自动转换"
+msgstr ""
+
+#: includes/Core/ProductPricingManager.php:90
+#, php-format
+msgid "自动: %s"
+msgstr ""
+
+#: includes/Core/ProductPricingManager.php:143
+msgid "多币种变体价格"
+msgstr ""
+
+#: includes/Core/ProductPricingManager.php:151
+msgid "自动"
+msgstr ""
+
+#: includes/Core/CheckoutSettlementHandler.php:143
+#, php-format
+msgid "%s 暂不支持直接结算，您的订单将以 %s 结算。显示价格已自动换算。"
+msgstr ""
+
+#: includes/Core/CheckoutSettlementHandler.php:181
+#: includes/Core/CheckoutSettlementHandler.php:189
+#: includes/Core/CheckoutSettlementHandler.php:231
+msgid "结算货币"
+msgstr ""
+
+#: includes/Core/CheckoutSettlementHandler.php:184
+msgid "您选择的货币暂不支持直接结算，订单将以该货币结算。"
+msgstr ""
+
+#: includes/Core/CheckoutSettlementHandler.php:192
+msgid "您将以所选货币进行结算。"
+msgstr ""
+
+#: includes/Core/CheckoutSettlementHandler.php:276
+#, php-format
+msgid "支持以 %s 结算"
+msgstr ""
+
+#: includes/Core/CheckoutSettlementHandler.php:277
+#, php-format
+msgid "%s 不支持直接结算，将以 %s 结算"
+msgstr ""
+
+#: includes/Core/PriceRoundingManager.php:140
+msgid ".99结尾（心理定价）"
+msgstr ""
+
+#: includes/Core/PriceRoundingManager.php:146
+msgid ".95结尾"
+msgstr ""
+
+#: includes/Core/PriceRoundingManager.php:152
+msgid "向上取整到10"
+msgstr ""
+
+#: includes/Core/PriceRoundingManager.php:158
+msgid "四舍五入到整数"
+msgstr ""
+
+#: includes/Core/PriceRoundingManager.php:164
+msgid "四舍五入到5的倍数"
+msgstr ""
+
+#: includes/Core/PriceRoundingManager.php:170
+msgid "人民币精确到分"
+msgstr ""
+
+#: includes/Core/PriceRoundingManager.php:176
+msgid "日元无小数"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:277
+#: includes/classes/PaymentMethodManager.php:522
+msgid "Payment Fee"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:332
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:352
+msgid "Payment Method Management"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:359
+msgid "Payment Method Mapping"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:363
+msgid "Payment Fees"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:367
+msgid "Registered Gateways"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:411
+msgid "Currency"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:412
+#: includes/classes/PaymentMethodManager.php:739
+#: includes/classes/PaymentMethodManager.php:740
+msgid "Payment Methods"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:413
+msgid "Status"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:425
+msgid "Select payment methods..."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:439
+msgid "Configured"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:443
+msgid "Using Default"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:453
+msgid "Save Mapping"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:454
+msgid "Reset to Defaults"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:478
+#, php-format
+msgid "%s (%s)"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:482
+msgid "Payment Method"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:483
+msgid "Fee Type"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:484
+msgid "Fee Value"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:485
+msgid "Fee Label"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:486
+msgid "Taxable"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:487
+msgid "Min Amount"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:488
+msgid "Max Amount"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:503
+msgid "Percentage (%)"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:506
+msgid "Fixed Amount"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:556
+msgid "Save Fees"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:572
+msgid "Below is a list of all registered WooCommerce payment gateways. Enabled gateways are available for currency mapping."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:578
+msgid "Gateway ID"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:579
+msgid "Title"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:580
+msgid "Description"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:581
+msgid "Enabled"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:582
+msgid "Supported Currencies"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:594
+msgid "Yes"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:596
+msgid "No"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:603
+msgid "All currencies"
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:611
+msgid "No payment gateways registered."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:631
+msgid "You do not have sufficient permissions."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:636
+msgid "Security check failed. Please refresh the page and try again."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:764
+msgid "Payment method mapping has been saved successfully."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:768
+msgid "Payment method mapping has been reset to defaults."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:772
+msgid "Failed to save payment method mapping. Please try again."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:776
+msgid "Payment fees have been saved successfully."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:780
+msgid "Failed to save payment fees. Please try again."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:807
+msgid "Insufficient permissions."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:813
+msgid "Currency is required."
+msgstr ""
+
+#: includes/classes/PaymentMethodManager.php:819
+msgid "No payment methods available."
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:39
+#: includes/License/LicenseAdmin.php:40
+msgid "License Management"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:53
+#: includes/License/LicenseAdmin.php:71
+#: includes/License/LicenseAdmin.php:82
+#: includes/License/LicenseAdmin.php:96
+#: includes/License/LicenseAdmin.php:126
+msgid "Insufficient permissions"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:146
+msgid "License page rendering error:"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:160
+msgid "License Activated"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:163
+#: includes/License/LicenseAdmin.php:246
+#: includes/License/LicenseAdmin.php:285
+msgid "License Key:"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:167
+msgid "Licensed Site:"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:171
+msgid "Site Usage:"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:175
+#: includes/License/LicenseAdmin.php:250
+msgid "Expires:"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:182
+#: includes/License/LicenseAdmin.php:257
+msgid "days"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:184
+#: includes/License/LicenseAdmin.php:259
+msgid "Lifetime"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:191
+msgid "One-Click Upgrade to Premium"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:192
+msgid "Click the button below to automatically download and install premium features. Installation takes about 10-30 seconds."
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:195
+msgid "Upgrade to Premium"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:204
+#: includes/License/LicenseAdmin.php:267
+msgid "Re-verify"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:206
+msgid "Are you sure you want to deactivate?"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:208
+#: includes/License/LicenseAdmin.php:271
+msgid "Deactivate License"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:218
+msgid "About to download and install premium. Do not close the page during installation. Continue?"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:220
+msgid "Downloading and installing..."
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:231
+msgid "Installation Failed"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:232
+#: includes/License/LicenseAdmin.php:236
+msgid "Retry Installation"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:235
+msgid "Network Error"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:244
+msgid "Premium Running"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:247
+msgid "Plan:"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:248
+msgid "Site:"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:269
+msgid "Are you sure? Premium features will be unavailable after deactivation."
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:279
+#: includes/License/LicenseAdmin.php:297
+msgid "Activate License"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:280
+msgid "Enter the license key from your purchase to unlock premium features."
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:293
+msgid "Format: PCS-P-XXXX-XXXX (Pro) / PCS-E-XXXX-XXXX (Enterprise)"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:302
+msgid "Plans & Features"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:303
+msgid "Choose the plan that fits your business. Free version is available forever."
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:309
+msgid "Plan 1"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:310
+#: includes/License/LicenseAdmin.php:311
+msgid "Free"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:312
+msgid "For startups and small cross-border e-commerce"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:314
+msgid "Base currency + 5 additional currencies"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:315
+msgid "One-click rate fetch (Free API)"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:316
+msgid "Manual rate editing"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:317
+msgid "30-hour rate validity"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:318
+msgid "Currency selector (Product/Cart/Checkout)"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:319
+msgid "Online customer service widget (12+ channels)"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:320
+msgid "Cache compatible (Super Cache/CDN)"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:321
+msgid "WooCommerce Blocks support"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:322
+msgid "Subscriptions/Bookings compatible"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:323
+#: includes/License/LicenseAdmin.php:340
+#: includes/License/LicenseAdmin.php:371
+msgid "Unlimited currencies"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:324
+#: includes/License/LicenseAdmin.php:341
+#: includes/License/LicenseAdmin.php:372
+msgid "Never-expiring rates"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:325
+#: includes/License/LicenseAdmin.php:343
+msgid "GeoIP auto-detection"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:326
+msgid "Image watermark / Price rounding"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:328
+msgid "Currently Active"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:333
+msgid "Recommended"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:334
+msgid "Plan 2"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:335
+msgid "Pro"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:336
+#: includes/License/LicenseAdmin.php:361
+msgid "month"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:337
+msgid "$49/year (save 17%)"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:338
+msgid "For growing businesses expanding to international markets"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:340
+msgid "all 206"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:342
+msgid "Automatic API rate updates"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:344
+msgid "Custom rates & markups"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:345
+msgid "Price rounding"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:346
+msgid "Image watermark"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:347
+#: includes/License/LicenseAdmin.php:375
+msgid "Order analytics dashboard"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:348
+#: includes/License/LicenseAdmin.php:376
+msgid "Advanced selector styles"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:349
+msgid "Country-based pricing"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:350
+msgid "All Free features"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:351
+#: includes/License/LicenseAdmin.php:366
+msgid "Order Bump"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:352
+#: includes/License/LicenseAdmin.php:367
+msgid "Product pricing management"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:354
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:359
+msgid "Plan 3"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:360
+msgid "Enterprise"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:362
+msgid "$99/year (save 31%)"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:363
+msgid "For large enterprises and cross-border e-commerce service providers"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:365
+msgid "All Pro features"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:368
+msgid "Checkout settlement"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:369
+msgid "Priority technical support"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:370
+msgid "Multi-site support"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:373
+msgid "GeoIP + Country pricing"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:374
+msgid "Image watermark + Price rounding"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:378
+msgid "Upgrade to Enterprise"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:396
+msgid "License activated successfully!"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:397
+msgid "Activation failed. Please check your license key."
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:398
+msgid "Please enter a license key."
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:399
+msgid "License deactivated."
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:400
+msgid "License verified successfully!"
+msgstr ""
+
+#: includes/License/LicenseAdmin.php:401
+msgid "License verification failed."
+msgstr ""
+

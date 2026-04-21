@@ -1,0 +1,195 @@
+/* 货币切换器管理界面样式 */
+.pcs-settings-wrap {
+    max-width: 1200px;
+}
+
+.pcs-settings-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.pcs-settings-section h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.pcs-currency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.pcs-currency-option {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.pcs-currency-option input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.pcs-system-status {
+    background: #f9f9f9;
+    border-left: 4px solid #0073aa;
+}
+
+.pcs-system-status table {
+    margin: 0;
+}
+
+.pcs-system-status th {
+    width: 200px;
+}
+
+/* 专业货币切换器后台样式 */
+.pcs-admin-container {
+    max-width: 1200px;
+    margin: 20px 0;
+}
+
+.pcs-settings-area {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.pcs-settings-area h2 {
+    margin-top: 0;
+    color: #23282d;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.pcs-form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pcs-form-table th {
+    text-align: left;
+    padding: 15px 10px;
+    width: 200px;
+    font-weight: 600;
+}
+
+.pcs-form-table td {
+    padding: 15px 10px;
+    vertical-align: top;
+}
+
+.pcs-currency-list {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.pcs-currency-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.pcs-currency-item:hover {
+    background-color: #f9f9f9;
+    border-color: #0073aa;
+}
+
+.pcs-currency-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.pcs-notification {
+    background: #f0f8ff;
+    border-left: 4px solid #0073aa;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 3px;
+}
+
+.pcs-notification.success {
+    background: #f0fff0;
+    border-left-color: #46b450;
+}
+
+.pcs-notification.warning {
+    background: #fff8e1;
+    border-left-color: #ffb900;
+}
+
+.pcs-notification.error {
+    background: #ffeaea;
+    border-left-color: #dc3232;
+}
+
+.pcs-submit-area {
+    text-align: right;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+
+.pcs-button {
+    background: #0073aa;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.pcs-button:hover {
+    background: #005a87;
+}
+
+.pcs-button-primary {
+    background: #0073aa;
+}
+
+.pcs-button-primary:hover {
+    background: #005a87;
+}
+
+.pcs-button-secondary {
+    background: #72777c;
+}
+
+.pcs-button-secondary:hover {
+    background: #50575e;
+}
+
+/* 响应式设计 */
+@media (max-width: 782px) {
+    .pcs-form-table th,
+    .pcs-form-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .pcs-form-table th {
+        border-bottom: none;
+        padding-bottom: 5px;
+    }
+    
+    .pcs-currency-list {
+        max-height: 200px;
+    }
+}

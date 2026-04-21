@@ -1,0 +1,70 @@
+MIT License with Non-Commercial Restriction
+
+Copyright (c) 2026 WooCross
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, **subject to the following conditions**:
+
+1. **Non-Commercial Use Only**
+   The Software may NOT be used for commercial purposes. Commercial purposes
+   include, but are not limited to:
+   - Using the Software in a production environment for revenue-generating activities
+   - Bundling or distributing the Software as part of a commercial product or service
+   - Using the Software to provide paid services to third parties
+   - Integrating the Software into a commercial WordPress theme, plugin, or SaaS product
+   - Any use that generates direct or indirect financial gain
+
+2. **Personal and Educational Use**
+   The Software may be used free of charge for:
+   - Personal websites and blogs (non-revenue generating)
+   - Educational and research purposes
+   - Testing and development environments
+   - Open-source projects (with the same non-commercial restriction)
+
+3. **Commercial Licensing**
+   For commercial use, you must obtain a commercial license from WooCross.
+   Commercial licenses are available at: https://hb.woocross.com/pricing.php
+   
+   Using the Software without a valid commercial license for commercial purposes
+   constitutes a violation of this license and may result in legal action.
+
+4. **Attribution**
+   The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+5. **Modifications**
+   You may modify the Software for personal or educational use. Any modified versions
+   must:
+   - Retain the original copyright notice
+   - Include a prominent notice stating that the file was modified
+   - Be distributed under the same license terms (non-commercial)
+
+6. **No Warranty**
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+---
+
+## Summary
+
+| Use Case | Allowed? |
+|----------|----------|
+| Personal website/blog | ✅ Yes |
+| Educational/research | ✅ Yes |
+| Development/testing | ✅ Yes |
+| Open-source project (same license) | ✅ Yes |
+| Commercial WooCommerce store | ❌ Need license |
+| Selling as a product | ❌ Need license |
+| SaaS integration | ❌ Need license |
+| Client project (commercial) | ❌ Need license |
+
+**For commercial licensing, visit: https://hb.woocross.com/pricing.php**
+**Contact: woocross@qq.com**

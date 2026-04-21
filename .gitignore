@@ -1,0 +1,41 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Build outputs
+/dist/
+/build/
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+debug.log
+
+# Cache
+.cache/
+*.cache
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# Package files (generated)
+*.zip
+
+# Test coverage
+/coverage/
+.phpunit.result.cache
+
+# WordPress
+wp-config.php
