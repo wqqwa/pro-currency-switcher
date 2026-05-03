@@ -3,14 +3,14 @@
  * Plugin Name:       Pro Currency Switcher
  * Plugin URI:        https://hb.woocross.com
  * Description:       适用于 WooCommerce 的免费多币种切换器。支持 206 种货币、手动汇率、货币选择器、在线客服小部件、缓存兼容性以及 WooCommerce 模块。
- * Version:           1.2.0
+ * Version:           1.2.1
  * Requires at least: 5.0
  * Tested up to:      7.0
  * Requires PHP:      7.4
  * Author:            WooCross
  * Author URI:        https://hb.woocross.com
  * License:           GPLv2 or later
- * License URI:       https://hb.woocross.com/license
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       pro-currency-switcher
  * Domain Path:       /languages
  *
@@ -18,7 +18,7 @@
  * WC tested up to:      9.7
  *
  * @package           ProCurrencySwitcher
- * @version           1.2.0
+ * @version           1.2.1
  * @author            WooCross
  * @license           GPLv2 or later
  */
@@ -39,7 +39,7 @@ if (isset($_POST['action']) && in_array($_POST['action'], ['activate', 'activate
 // ============================================================
 // 插件常量
 // ============================================================
-define('PCS_VERSION', '1.2.0');
+define('PCS_VERSION', '1.2.1');
 define('PCS_DB_VERSION', '1.0.0');
 define('PCS_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('PCS_PLUGIN_URL', plugin_dir_url(__FILE__));

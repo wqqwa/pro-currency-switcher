@@ -88,20 +88,21 @@
         showMessage(message, type) {
             const bgColor = type === 'success' ? '#4CAF50' : '#f44336';
             
-            $('body').append(`
-                <div id="pcs-message" style="
-                    position:fixed;
-                    top:20px;
-                    left:50%;
-                    transform:translateX(-50%);
-                    background:${bgColor};
-                    color:white;
-                    padding:10px 20px;
-                    border-radius:4px;
-                    z-index:10000;
-                    box-shadow:0 2px 10px rgba(0,0,0,0.2);
-                ">${message}</div>
-            `);
+            // 安全修复：使用 .text() 防止XSS
+            const $msg = $('<div id="pcs-message"></div>').text(message);
+            $msg.css({
+                position: 'fixed',
+                top: '20px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: bgColor,
+                color: 'white',
+                padding: '10px 20px',
+                borderRadius: '4px',
+                zIndex: '10000',
+                boxShadow: '0 2px 10px rgba(0,0,0,0.2)'
+            });
+            $('body').append($msg);
             
             setTimeout(() => {
                 $('#pcs-message').fadeOut(300, function() {

@@ -1,5 +1,13 @@
 /* 梧州电通广告货币显示JavaScript功能 */
 
+// 安全修复：HTML转义工具函数，防止XSS
+function pcsEscapeHtml(str) {
+    if (typeof str !== 'string') return str;
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
+
 (function($) {
     'use strict';
 
@@ -250,8 +258,8 @@
                 const newPrice = priceData[priceKey];
 
                 if (newPrice) {
-                    // 使用html()保留格式，并确保加粗显示
-                    $element.html('<span class="pcs-converted-price" style="font-weight:700;">' + newPrice.formatted + '</span>');
+                    // 安全修复：使用 pcsEscapeHtml 转义价格文本，防止XSS
+                    $element.html('<span class="pcs-converted-price" style="font-weight:700;">' + pcsEscapeHtml(newPrice.formatted) + '</span>');
                     $element.attr('data-original-price', newPrice.original);
                 }
             });

@@ -79,16 +79,31 @@ class LicenseUpdater {
     }
 
     /**
-     * 发送API请求
+     * 发送API请求（含HMAC-SHA256签名）
      */
     private function api_request(string $endpoint, array $data): array|\WP_Error {
         $url = rtrim($this->api_url, '/') . $endpoint;
+
+        // 安全修复：从 LicenseManager 获取密钥，添加 HMAC-SHA256 签名
+        $timestamp = time();
+        $api_secret = '';
+        if (class_exists('ProCurrencySwitcher\\License\\LicenseManager')) {
+            $api_secret = LicenseManager::get_instance()->get_api_secret();
+        }
+        if (empty($api_secret)) {
+            $api_secret = get_option('pcs_api_secret', '');
+        }
+
+        $signature_payload = $endpoint . '|' . $timestamp;
+        $signature = hash_hmac('sha256', $signature_payload, $api_secret);
 
         $response = wp_remote_post($url, [
             'timeout' => 10,
             'body'    => $data,
             'headers' => [
-                'Content-Type' => 'application/x-www-form-urlencoded',
+                'Content-Type'    => 'application/x-www-form-urlencoded',
+                'X-PCS-Signature' => $signature,
+                'X-PCS-Timestamp' => (string) $timestamp,
             ],
         ]);
 

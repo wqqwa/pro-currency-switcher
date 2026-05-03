@@ -86,10 +86,11 @@
                     if (res.success) {
                         var d = res.data;
                         var $detail = $('#pcs-message-detail').empty();
-                        $detail.append($('<p>').html('<span class="pcs-msg-label">姓名：</span>' + d.name));
-                        $detail.append($('<p>').html('<span class="pcs-msg-label">邮箱：</span>' + d.email));
-                        $detail.append($('<p>').html('<span class="pcs-msg-label">电话：</span>' + (d.phone || '-')));
-                        $detail.append($('<p>').html('<span class="pcs-msg-label">时间：</span>' + d.created_at));
+                        // 安全修复：使用 .text() 代替 .html() 防止XSS
+                        $detail.append($('<p>').text('姓名：' + d.name));
+                        $detail.append($('<p>').text('邮箱：' + d.email));
+                        $detail.append($('<p>').text('电话：' + (d.phone || '-')));
+                        $detail.append($('<p>').text('时间：' + d.created_at));
                         $detail.append($('<div class="pcs-msg-content">').text(d.message));
                         $('#pcs-message-modal').show();
                     }

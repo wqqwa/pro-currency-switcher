@@ -222,15 +222,31 @@ class WCExtensionsCompat {
             return $price;
         }
 
-        // 检查是否已经转换过（避免重复转换）
+        // 安全修复：双重转换防护
+        // 检查是否已经通过本方法转换过（使用运行时标记）
+        static $converted_prices = [];
+        $product_id = $product->get_id();
+        if (isset($converted_prices[$product_id])) {
+            return $price; // 已经转换过，直接返回
+        }
+
+        // 检查是否已经转换过（通过 _pcs_original_price 元数据标记）
+        $original_price = get_post_meta($product_id, '_pcs_original_price', true);
+        if (!empty($original_price)) {
+            return $price; // 已经标记为已转换，避免双重转换
+        }
+
+        // 检查手动价格
         $meta_key = '_pcs_price_' . strtolower($current);
-        $manual = get_post_meta($product->get_id(), $meta_key, true);
+        $manual = get_post_meta($product_id, $meta_key, true);
         if ($manual && floatval($manual) > 0) {
             return floatval($manual);
         }
 
-        // 检查价格是否看起来已经是转换过的（简单启发式）
-        // 如果价格与基准价格相同，说明可能需要转换
-        return $service->convert_price($price, $base, $current);
+        // 执行转换并标记
+        $converted = $service->convert_price($price, $base, $current);
+        $converted_prices[$product_id] = true;
+
+        return $converted;
     }
 }

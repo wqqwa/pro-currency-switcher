@@ -392,10 +392,10 @@ class AdminSettings {
         echo '<select name="pcs_base_currency" id="pcs_base_currency">';
         foreach ($all_currencies as $code => $name) {
             $selected = selected($base_currency, $code, false);
-            echo "<option value='{$code}' {$selected}>{$code} - {$name}</option>";
+            echo '<option value="' . esc_attr($code) . '" ' . $selected . '>' . esc_html($code) . ' - ' . esc_html($name) . '</option>';
         }
         echo '</select>';
-        echo '<p class="description">' . __('Select the base currency for your store', 'pro-currency-switcher') . '</p>';
+        echo '<p class="description">' . esc_html__('Select the base currency for your store', 'pro-currency-switcher') . '</p>';
     }
 
     /**
@@ -450,13 +450,13 @@ class AdminSettings {
                 $disabled = 'disabled="disabled"';
             }
 
-            echo "<label class='pcs-currency-option {$class}' style='display: block; margin: 5px 0;'>";
-            echo "<input type='checkbox' name='pcs_enabled_currencies[]' value='{$code}' {$checked} {$disabled} class='pcs-currency-checkbox' data-base='" . ($is_base ? '1' : '0') . "'>";
-            echo " <strong>{$code}</strong> - {$name}";
+            echo '<label class="pcs-currency-option ' . esc_attr($class) . '" style="display: block; margin: 5px 0;">';
+            echo '<input type="checkbox" name="pcs_enabled_currencies[]" value="' . esc_attr($code) . '" ' . $checked . ' ' . $disabled . ' class="pcs-currency-checkbox" data-base="' . ($is_base ? '1' : '0') . '">';
+            echo ' <strong>' . esc_html($code) . '</strong> - ' . esc_html($name);
             if ($is_base) {
                 echo ' <span style="color:#2271b1;font-size:11px;">(' . esc_html__('Base Currency', 'pro-currency-switcher') . ')</span>';
             }
-            echo "</label>";
+            echo '</label>';
         }
         echo '</div>';
 

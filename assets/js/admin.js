@@ -141,10 +141,9 @@
             // 移除现有通知
             $('.pcs-notice').remove();
             
-            const noticeClass = `pcs-notice ${type}`;
-            const noticeHtml = `<div class="${noticeClass}">${message}</div>`;
-            
-            $('.pcs-admin-wrap').prepend(noticeHtml);
+            // 安全修复：使用 .text() 防止XSS
+            const $notice = $('<div class="pcs-notice ' + type + '"></div>').text(message);
+            $('.pcs-admin-wrap').prepend($notice);
             
             // 5秒后自动移除通知
             setTimeout(() => {

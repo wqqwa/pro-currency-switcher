@@ -214,7 +214,7 @@ class CurrencyService {
 
         if (empty($country)) {
             // 备用API
-            $response = wp_remote_get('http://ip-api.com/json/' . $ip, ['timeout' => 3]);
+            $response = wp_remote_get('https://ip-api.com/json/' . $ip, ['timeout' => 3]);
             if (!is_wp_error($response)) {
                 $data = json_decode(wp_remote_retrieve_body($response), true);
                 if ($data && isset($data['countryCode'])) {

@@ -68,13 +68,33 @@ class LicenseManager {
             ? PCS_API_URL
             : 'https://hb.woocross.com/api/v1';
 
+        // 安全修复：移除硬编码密钥，安装时自动生成唯一密钥
         $this->api_secret = defined('PCS_API_SECRET')
             ? PCS_API_SECRET
-            : get_option('pcs_api_secret', 'pcs_hmac_secret_key_2026');
+            : $this->ensure_api_secret();
 
         $this->domain = $this->get_site_domain();
         $this->load_cached_license();
         $this->check_license();
+    }
+
+    /**
+     * 确保API密钥存在（安装时自动生成）
+     */
+    private function ensure_api_secret(): string {
+        $secret = get_option('pcs_api_secret', '');
+        if (empty($secret)) {
+            $secret = wp_generate_password(64, true, true);
+            update_option('pcs_api_secret', $secret, false);
+        }
+        return $secret;
+    }
+
+    /**
+     * 获取API密钥（公共方法，供其他模块使用）
+     */
+    public function get_api_secret(): string {
+        return $this->api_secret;
     }
 
     // ==================== 公共API ====================

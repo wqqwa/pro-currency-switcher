@@ -105,15 +105,21 @@ class CacheCompatHandler {
         $nonce = wp_create_nonce('pcs_nonce');
         $rest_url = rest_url('pcs/v1/prices');
 
+        // 安全修复：所有变量使用 wp_json_encode 转义，防止XSS
+        $js_ajax_url = wp_json_encode($ajax_url);
+        $js_nonce = wp_json_encode($nonce);
+        $js_base_currency = wp_json_encode($base_currency);
+        $js_rest_url = wp_json_encode($rest_url);
+
         return "
         (function() {
             'use strict';
 
             // 检查Cookie中的货币是否与页面显示的货币一致
             var cookieCurrency = document.cookie.match(/pcs_currency=([^;]+)/);
-            cookieCurrency = cookieCurrency ? cookieCurrency[1] : '{$base_currency}';
+            cookieCurrency = cookieCurrency ? cookieCurrency[1] : {$js_base_currency};
 
-            if (cookieCurrency === '{$base_currency}') {
+            if (cookieCurrency === {$js_base_currency}) {
                 return; // 基准货币，无需更新
             }
 
@@ -139,10 +145,10 @@ class CacheCompatHandler {
             function fetchConvertedPrices(prices) {
                 var priceValues = prices.map(function(p) { return p.priceValue; });
 
-                fetch('{$ajax_url}', {
+                fetch({$js_ajax_url}, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: 'action=pcs_get_prices&nonce={$nonce}&prices=' + encodeURIComponent(JSON.stringify(priceValues)) + '&from={$base_currency}&to=' + cookieCurrency
+                    body: 'action=pcs_get_prices&nonce=' + {$js_nonce} + '&prices=' + encodeURIComponent(JSON.stringify(priceValues)) + '&from=' + {$js_base_currency} + '&to=' + cookieCurrency
                 })
                 .then(function(response) { return response.json(); })
                 .then(function(data) {
@@ -163,8 +169,8 @@ class CacheCompatHandler {
                         var span = document.createElement('span');
                         span.className = 'pcs-converted-price';
                         span.style.fontWeight = '700';
-                        span.innerHTML = formatted;
-                        item.element.innerHTML = '';
+                        span.textContent = formatted;
+                        item.element.textContent = '';
                         item.element.appendChild(span);
                     }
                 });
@@ -242,7 +248,10 @@ class CacheCompatHandler {
         register_rest_route('pcs/v1', '/currencies', [
             'methods' => 'GET',
             'callback' => [$this, 'rest_get_currencies'],
-            'permission_callback' => '__return_true',
+            // 安全修复：限制权限，防止未认证用户枚举货币数据
+            'permission_callback' => function() {
+                return current_user_can('read');
+            },
         ]);
     }
 

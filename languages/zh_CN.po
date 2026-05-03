@@ -1,7 +1,7 @@
 # Pro Currency Switcher - Simplified Chinese Translation
 # Copyright (C) 2026 WooCross
 # This file is distributed under the same license as the Pro Currency Switcher plugin.
-# WooCross <woocross@qq.com>, 2026.
+# WooCross <support@woocross.com>, 2026.
 #
 msgid ""
 msgstr ""
@@ -9,8 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://woocross.com/support\n"
 "POT-Creation-Date: 2026-04-08 00:00+0000\n"
 "PO-Revision-Date: 2026-04-08 00:00+0800\n"
-"Last-Translator: WooCross <woocross@qq.com>\n"
-"Language-Team: WooCross <woocross@qq.com>\n"
+"Last-Translator: WooCross <support@woocross.com>\n"
+"Language-Team: WooCross <support@woocross.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
