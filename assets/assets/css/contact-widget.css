@@ -1,0 +1,565 @@
+/**
+ * 在线客服组件 - 前端样式
+ *
+ * @package ProCurrencySwitcher
+ * @since 7.0.0
+ */
+
+/* ============================================================
+   浮标定位
+   ============================================================ */
+.pcs-contact-widget {
+    position: fixed;
+    z-index: 999999;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.pcs-position-bottom-right {
+    bottom: 24px;
+    right: 24px;
+}
+
+.pcs-position-bottom-left {
+    bottom: 24px;
+    left: 24px;
+}
+
+.pcs-position-top-right {
+    top: 24px;
+    right: 24px;
+}
+
+.pcs-position-top-left {
+    top: 24px;
+    left: 24px;
+}
+
+.pcs-position-center-right {
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+}
+
+.pcs-position-center-left {
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+}
+
+/* ============================================================
+   浮标按钮 (FAB)
+   ============================================================ */
+.pcs-cw-fab {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    color: #fff;
+}
+
+.pcs-cw-fab:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pcs-cw-fab-text {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    pointer-events: none;
+}
+
+/* 文字位置根据浮标位置调整 */
+.pcs-position-bottom-right .pcs-cw-fab-text,
+.pcs-position-top-right .pcs-cw-fab-text,
+.pcs-position-center-right .pcs-cw-fab-text {
+    right: calc(100% + 10px);
+}
+
+.pcs-position-bottom-left .pcs-cw-fab-text,
+.pcs-position-top-left .pcs-cw-fab-text,
+.pcs-position-center-left .pcs-cw-fab-text {
+    left: calc(100% + 10px);
+}
+
+.pcs-cw-fab-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ff3b30;
+    color: #fff;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    display: none;
+}
+
+/* ============================================================
+   面板
+   ============================================================ */
+.pcs-cw-panel {
+    position: absolute;
+    width: 320px;
+    max-height: 480px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: pcs-cw-slide-in 0.25s ease-out;
+}
+
+@keyframes pcs-cw-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* 面板位置 */
+.pcs-position-bottom-right .pcs-cw-panel {
+    bottom: 72px;
+    right: 0;
+}
+
+.pcs-position-bottom-left .pcs-cw-panel {
+    bottom: 72px;
+    left: 0;
+}
+
+.pcs-position-top-right .pcs-cw-panel {
+    top: 72px;
+    right: 0;
+}
+
+.pcs-position-top-left .pcs-cw-panel {
+    top: 72px;
+    left: 0;
+}
+
+.pcs-position-center-right .pcs-cw-panel {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pcs-position-center-left .pcs-cw-panel {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ============================================================
+   面板头部
+   ============================================================ */
+.pcs-cw-panel-header {
+    padding: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+.pcs-cw-agent-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.pcs-cw-agent-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.pcs-cw-agent-name {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.pcs-cw-welcome-msg {
+    font-size: 12px;
+    opacity: 0.85;
+    margin-top: 2px;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pcs-cw-panel-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.pcs-cw-panel-close:hover {
+    opacity: 1;
+}
+
+/* ============================================================
+   渠道列表
+   ============================================================ */
+.pcs-cw-channels {
+    padding: 8px 0;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.pcs-cw-channel {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    text-decoration: none;
+    color: #333;
+    gap: 12px;
+}
+
+.pcs-cw-channel:hover {
+    background-color: #f5f5f5;
+}
+
+.pcs-cw-channel svg {
+    flex-shrink: 0;
+}
+
+.pcs-cw-channel-label {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* ============================================================
+   微信二维码弹窗
+   ============================================================ */
+.pcs-cw-channel-qrcode {
+    position: relative;
+}
+
+.pcs-cw-qrcode-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    z-index: 99999;
+}
+
+.pcs-cw-qrcode-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 99998;
+}
+
+.pcs-cw-qrcode-popup img {
+    width: 160px;
+    height: 160px;
+    display: block;
+    object-fit: contain;
+}
+
+/* ============================================================
+   留言表单
+   ============================================================ */
+.pcs-cw-form-section {
+    border-top: 1px solid #eee;
+}
+
+.pcs-cw-form-toggle {
+    padding: 12px 16px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.pcs-cw-form-toggle:hover {
+    opacity: 0.9;
+}
+
+.pcs-cw-contact-form {
+    padding: 12px 16px;
+    display: none;
+}
+
+.pcs-cw-contact-form.active {
+    display: block;
+}
+
+.pcs-cw-form-field {
+    margin-bottom: 10px;
+}
+
+.pcs-cw-form-field input,
+.pcs-cw-form-field textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+.pcs-cw-form-field input:focus,
+.pcs-cw-form-field textarea:focus {
+    border-color: #2271b1;
+}
+
+.pcs-cw-form-field textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.pcs-cw-form-submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.pcs-cw-form-submit:hover {
+    opacity: 0.9;
+}
+
+.pcs-cw-form-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ============================================================
+   提示消息
+   ============================================================ */
+.pcs-cw-notice {
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.pcs-cw-notice-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.pcs-cw-notice-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ============================================================
+   响应式设计
+   ============================================================ */
+@media (max-width: 480px) {
+    .pcs-cw-panel {
+        width: calc(100vw - 32px);
+        max-height: 70vh;
+    }
+
+    .pcs-cw-fab {
+        width: 52px;
+        height: 52px;
+    }
+
+    .pcs-cw-fab-text {
+        display: none;
+    }
+
+    .pcs-position-bottom-right {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .pcs-position-bottom-left {
+        bottom: 16px;
+        left: 16px;
+    }
+}
+
+/* ============================================================
+   后台管理样式
+   ============================================================ */
+.pcs-contact-widget-admin .pcs-settings-content {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+    border-top: none;
+    margin-top: -1px;
+}
+
+.pcs-contact-widget-admin .pcs-settings-section {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+}
+
+.pcs-contact-widget-admin .pcs-settings-section:last-child {
+    border-bottom: none;
+}
+
+.pcs-contact-widget-admin .pcs-settings-section h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 可重复项 */
+.pcs-repeatable-item {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.pcs-repeatable-item .regular-text {
+    flex: 1;
+}
+
+.pcs-remove-item {
+    color: #d63638;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0 8px;
+}
+
+/* 留言管理 */
+.pcs-messages-section h2 {
+    margin-bottom: 16px;
+}
+
+.pcs-message-count {
+    font-weight: normal;
+    color: #666;
+    font-size: 14px;
+}
+
+/* 弹窗 */
+#pcs-message-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+}
+
+.pcs-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.pcs-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.pcs-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.pcs-modal-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.pcs-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+    padding: 0 4px;
+}
+
+.pcs-modal-body {
+    padding: 20px;
+}
+
+.pcs-modal-body p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.pcs-modal-body .pcs-msg-label {
+    font-weight: 600;
+    color: #1d2327;
+    margin-right: 8px;
+}
+
+.pcs-modal-body .pcs-msg-content {
+    background: #f6f7f7;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 8px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+}

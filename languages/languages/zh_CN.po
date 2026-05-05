@@ -1,0 +1,1132 @@
+# Pro Currency Switcher - Simplified Chinese Translation
+# Copyright (C) 2026 WooCross
+# This file is distributed under the same license as the Pro Currency Switcher plugin.
+# WooCross <support@woocross.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Pro Currency Switcher 7.5.7\n"
+"Report-Msgid-Bugs-To: https://woocross.com/support\n"
+"POT-Creation-Date: 2026-04-08 00:00+0000\n"
+"PO-Revision-Date: 2026-04-08 00:00+0800\n"
+"Last-Translator: WooCross <support@woocross.com>\n"
+"Language-Team: WooCross <support@woocross.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Domain: pro-currency-switcher\n"
+
+# ============================================================
+# pro-currency-switcher.php
+# ============================================================
+
+msgid "Currency code cannot be empty"
+msgstr "货币代码不能为空"
+
+msgid "Currency switched successfully"
+msgstr "货币切换成功"
+
+msgid "Invalid currency code"
+msgstr "无效的货币代码"
+
+msgid "View Settings"
+msgstr "查看设置"
+
+# ============================================================
+# includes/Admin/AdminSettings.php
+# ============================================================
+
+msgid "WooCross Currency Switcher"
+msgstr "WooCross 货币切换器"
+
+msgid "Currency Switcher"
+msgstr "货币切换"
+
+msgid "WooCross Currency Switcher Settings"
+msgstr "WooCross 货币切换器设置"
+
+msgid "General Settings"
+msgstr "基本设置"
+
+msgid "Base Currency"
+msgstr "基准货币"
+
+msgid "Enabled Currencies"
+msgstr "启用货币"
+
+msgid "Free version allows base currency + %d additional currencies. Auto-trimmed. Upgrade to Pro or Enterprise for more."
+msgstr "免费版最多只能启用基准货币 + %d 个其他货币。已自动保留。如需更多货币，请升级到专业版或企业版。"
+
+msgid "Insufficient permissions"
+msgstr "权限不足"
+
+msgid "Page rendering error:"
+msgstr "页面渲染错误:"
+
+msgid "Page rendering error"
+msgstr "页面渲染出错"
+
+msgid "Please contact the developer with the following information: "
+msgstr "请联系开发者并提供以下信息: "
+
+msgid "Saving..."
+msgstr "保存中..."
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Please enter a valid exchange rate"
+msgstr "请输入有效的汇率数值"
+
+msgid "Exchange rate saved!"
+msgstr "汇率保存成功!"
+
+msgid "Save failed: "
+msgstr "保存失败: "
+
+msgid "Fetching..."
+msgstr "获取中..."
+
+msgid "Fetch Rates"
+msgstr "获取汇率"
+
+msgid "Rates fetched successfully! Expires in 30 hours."
+msgstr "汇率获取成功! 30小时后过期。"
+
+msgid "Fetch failed: "
+msgstr "获取失败: "
+
+msgid "Expired"
+msgstr "已过期"
+
+msgid "Remaining"
+msgstr "剩余"
+
+msgid "Never expires"
+msgstr "永不过期"
+
+msgid "hours"
+msgstr "小时"
+
+msgid "minutes"
+msgstr "分钟"
+
+msgid "seconds"
+msgstr "秒"
+
+msgid "Free version allows up to 5 currencies. Upgrade to Pro or Enterprise for more."
+msgstr "免费版最多只能启用5个货币。如需更多货币，请升级到专业版或企业版。"
+
+msgid "Save Settings"
+msgstr "保存设置"
+
+msgid "This will fetch the latest exchange rates from a public API. All rates will expire in 30 hours. Continue?"
+msgstr "将从公开API获取最新汇率，所有汇率30小时后过期。是否继续?"
+
+msgid "Configure basic settings for the currency switcher"
+msgstr "配置货币切换器的基本设置"
+
+msgid "Select the base currency for your store"
+msgstr "选择商店的基准货币，所有价格以此货币为基准进行换算。"
+
+msgid "Free version limit reached (base currency + %d other currencies)."
+msgstr "免费版已达上限 (基准货币 + %d 个其他货币)。"
+
+msgid "To enable more currencies, please upgrade to Pro or Enterprise."
+msgstr "如需启用更多货币，请升级到专业版或企业版。"
+
+msgid "View upgrade plans →"
+msgstr "查看升级套餐 →"
+
+msgid "Select currencies to display on the frontend (%d more currencies can be selected, China and Southeast Asia currencies are highlighted)"
+msgstr "选择要在前台显示的货币 (还可选择 %d 个货币，中国和东南亚货币已高亮显示)"
+
+msgid "System Status"
+msgstr "系统状态"
+
+msgid "Current Base Currency:"
+msgstr "当前基准货币:"
+
+msgid "Enabled Currencies Count:"
+msgstr "已启用货币数量:"
+
+msgid "WordPress Version:"
+msgstr "WordPress 版本:"
+
+msgid "Plugin Version:"
+msgstr "插件版本:"
+
+msgid "Exchange Rates"
+msgstr "汇率管理"
+
+msgid "Manually enter exchange rates or fetch the latest rates from a public API. Free version rates expire after 30 hours."
+msgstr "手动输入汇率或从公开API获取最新汇率。免费版汇率30小时后过期。"
+
+msgid "Fetch Latest Rates"
+msgstr "获取最新汇率"
+
+msgid "Auto-fetched from public API, expires in 30 hours"
+msgstr "从公开API自动获取，30小时后过期"
+
+msgid "No exchange rate data available."
+msgstr "暂无汇率数据。"
+
+msgid "Please save settings above first, then click \"Fetch Latest Rates\" or enter rates manually."
+msgstr "请先保存上方设置，然后点击\"获取最新汇率\"或手动输入汇率。"
+
+msgid "Currency Pair"
+msgstr "货币对"
+
+msgid "Current Rate"
+msgstr "当前汇率"
+
+msgid "Source"
+msgstr "来源"
+
+msgid "Validity"
+msgstr "有效期"
+
+msgid "New Rate"
+msgstr "新汇率"
+
+msgid "Action"
+msgstr "操作"
+
+msgid "Last Updated"
+msgstr "最后更新"
+
+msgid "Enabled currencies will appear here after saving settings."
+msgstr "保存设置后，已启用的货币将显示在此处。"
+
+msgid "Manual"
+msgstr "手动"
+
+msgid "Not set"
+msgstr "未设置"
+
+msgid "Upgrade to Pro"
+msgstr "升级到专业版"
+
+msgid "Permanent exchange rates"
+msgstr "永久汇率"
+
+msgid "Free version rates expire in 30 hours, Pro version never expires"
+msgstr "免费版汇率30小时后过期，专业版永不过期"
+
+msgid "Automatic API rate updates (supports ExchangeRate-API, Fixer, etc.)"
+msgstr "自动API汇率更新 (支持 ExchangeRate-API、Fixer 等)"
+
+msgid "GeoIP automatic visitor currency detection"
+msgstr "GeoIP 自动检测访客货币"
+
+msgid "Custom exchange rates and rate markups"
+msgstr "自定义汇率和汇率加价"
+
+msgid "Price rounding (.99/.95 preset templates)"
+msgstr "价格取整 (.99/.95 预设模板)"
+
+msgid "Image watermark feature"
+msgstr "图片水印功能"
+
+msgid "Order analytics dashboard"
+msgstr "订单分析仪表盘"
+
+msgid "Advanced selector styles (floating button, sidebar, etc.)"
+msgstr "高级选择器样式 (浮动按钮、侧边栏等)"
+
+msgid "View Pro Details →"
+msgstr "查看专业版详情 →"
+
+msgid "Never updated"
+msgstr "从未更新"
+
+msgid "Save failed"
+msgstr "保存失败"
+
+msgid "API request failed: "
+msgstr "API 请求失败: "
+
+msgid "Invalid API response data"
+msgstr "API 返回数据无效"
+
+msgid "Successfully fetched %d currency rates.%s"
+msgstr "成功获取 %d 个货币汇率。%s"
+
+msgid " (%d failed)"
+msgstr " (%d 个失败)"
+
+msgid "Failed to fetch any exchange rate data"
+msgstr "获取汇率数据失败"
+
+msgid "Currency switcher settings saved!"
+msgstr "货币切换器设置已保存!"
+
+msgid "Currency status updated"
+msgstr "货币状态已更新"
+
+msgid "No currencies selected"
+msgstr "未选择货币"
+
+msgid "Invalid operation"
+msgstr "无效操作"
+
+msgid "Bulk operation completed"
+msgstr "批量操作完成"
+
+# ============================================================
+# AdminSettings.php - Currency Names
+# ============================================================
+
+msgid "Chinese Yuan (Mainland China)"
+msgstr "人民币 (中国大陆)"
+
+msgid "New Taiwan Dollar (Taiwan)"
+msgstr "新台币 (台湾)"
+
+msgid "Hong Kong Dollar (Hong Kong)"
+msgstr "港币 (香港)"
+
+msgid "Macau Pataca (Macau)"
+msgstr "澳门元 (澳门)"
+
+msgid "Japanese Yen (Japan)"
+msgstr "日元 (日本)"
+
+msgid "South Korean Won (South Korea)"
+msgstr "韩元 (韩国)"
+
+msgid "Singapore Dollar (Singapore)"
+msgstr "新加坡元 (新加坡)"
+
+msgid "Malaysian Ringgit (Malaysia)"
+msgstr "马来西亚林吉特 (马来西亚)"
+
+msgid "Thai Baht (Thailand)"
+msgstr "泰铢 (泰国)"
+
+msgid "Indonesian Rupiah (Indonesia)"
+msgstr "印尼盾 (印度尼西亚)"
+
+msgid "Philippine Peso (Philippines)"
+msgstr "菲律宾比索 (菲律宾)"
+
+msgid "Vietnamese Dong (Vietnam)"
+msgstr "越南盾 (越南)"
+
+msgid "Indian Rupee (India)"
+msgstr "印度卢比 (印度)"
+
+msgid "Bangladeshi Taka (Bangladesh)"
+msgstr "孟加拉塔卡 (孟加拉)"
+
+msgid "Pakistani Rupee (Pakistan)"
+msgstr "巴基斯坦卢比 (巴基斯坦)"
+
+msgid "Sri Lankan Rupee (Sri Lanka)"
+msgstr "斯里兰卡卢比 (斯里兰卡)"
+
+msgid "Nepalese Rupee (Nepal)"
+msgstr "尼泊尔卢比 (尼泊尔)"
+
+msgid "Myanmar Kyat (Myanmar)"
+msgstr "缅甸缅元 (缅甸)"
+
+msgid "Cambodian Riel (Cambodia)"
+msgstr "柬埔寨瑞尔 (柬埔寨)"
+
+msgid "Lao Kip (Laos)"
+msgstr "老挝基普 (老挝)"
+
+msgid "Brunei Dollar (Brunei)"
+msgstr "文莱元 (文莱)"
+
+msgid "United States Dollar (USA)"
+msgstr "美元 (美国)"
+
+msgid "Canadian Dollar (Canada)"
+msgstr "加元 (加拿大)"
+
+msgid "Mexican Peso (Mexico)"
+msgstr "墨西哥比索 (墨西哥)"
+
+msgid "Brazilian Real (Brazil)"
+msgstr "巴西雷亚尔 (巴西)"
+
+msgid "Argentine Peso (Argentina)"
+msgstr "阿根廷比索 (阿根廷)"
+
+msgid "Chilean Peso (Chile)"
+msgstr "智利比索 (智利)"
+
+msgid "Colombian Peso (Colombia)"
+msgstr "哥伦比亚比索 (哥伦比亚)"
+
+msgid "Peruvian Sol (Peru)"
+msgstr "秘鲁索尔 (秘鲁)"
+
+msgid "Euro (European Union)"
+msgstr "欧元 (欧盟)"
+
+msgid "British Pound (United Kingdom)"
+msgstr "英镑 (英国)"
+
+msgid "Swiss Franc (Switzerland)"
+msgstr "瑞士法郎 (瑞士)"
+
+msgid "Russian Ruble (Russia)"
+msgstr "俄罗斯卢布 (俄罗斯)"
+
+msgid "Swedish Krona (Sweden)"
+msgstr "瑞典克朗 (瑞典)"
+
+msgid "Norwegian Krone (Norway)"
+msgstr "挪威克朗 (挪威)"
+
+msgid "Danish Krone (Denmark)"
+msgstr "丹麦克朗 (丹麦)"
+
+msgid "Polish Zloty (Poland)"
+msgstr "波兰兹罗提 (波兰)"
+
+msgid "Czech Koruna (Czech Republic)"
+msgstr "捷克克朗 (捷克)"
+
+msgid "Hungarian Forint (Hungary)"
+msgstr "匈牙利福林 (匈牙利)"
+
+msgid "Romanian Leu (Romania)"
+msgstr "罗马尼亚列伊 (罗马尼亚)"
+
+msgid "Bulgarian Lev (Bulgaria)"
+msgstr "保加利亚列弗 (保加利亚)"
+
+msgid "Croatian Kuna (Croatia)"
+msgstr "克罗地亚库纳 (克罗地亚)"
+
+msgid "Turkish Lira (Turkey)"
+msgstr "土耳其里拉 (土耳其)"
+
+msgid "Ukrainian Hryvnia (Ukraine)"
+msgstr "乌克兰格里夫纳 (乌克兰)"
+
+msgid "Australian Dollar (Australia)"
+msgstr "澳元 (澳大利亚)"
+
+msgid "New Zealand Dollar (New Zealand)"
+msgstr "新西兰元 (新西兰)"
+
+msgid "South African Rand (South Africa)"
+msgstr "南非兰特 (南非)"
+
+msgid "Egyptian Pound (Egypt)"
+msgstr "埃及镑 (埃及)"
+
+msgid "Nigerian Naira (Nigeria)"
+msgstr "尼日利亚奈拉 (尼日利亚)"
+
+msgid "Kenyan Shilling (Kenya)"
+msgstr "肯尼亚先令 (肯尼亚)"
+
+msgid "Ghanaian Cedi (Ghana)"
+msgstr "加纳塞地 (加纳)"
+
+msgid "Moroccan Dirham (Morocco)"
+msgstr "摩洛哥迪拉姆 (摩洛哥)"
+
+msgid "Algerian Dinar (Algeria)"
+msgstr "阿尔及利亚第纳尔 (阿尔及利亚)"
+
+msgid "Tunisian Dinar (Tunisia)"
+msgstr "突尼斯第纳尔 (突尼斯)"
+
+msgid "Saudi Riyal (Saudi Arabia)"
+msgstr "沙特里亚尔 (沙特阿拉伯)"
+
+msgid "UAE Dirham (UAE)"
+msgstr "阿联酋迪拉姆 (阿联酋)"
+
+msgid "Qatari Riyal (Qatar)"
+msgstr "卡塔尔里亚尔 (卡塔尔)"
+
+msgid "Kuwaiti Dinar (Kuwait)"
+msgstr "科威特第纳尔 (科威特)"
+
+msgid "Omani Rial (Oman)"
+msgstr "阿曼里亚尔 (阿曼)"
+
+msgid "Bahraini Dinar (Bahrain)"
+msgstr "巴林第纳尔 (巴林)"
+
+msgid "Jordanian Dinar (Jordan)"
+msgstr "约旦第纳尔 (约旦)"
+
+msgid "Lebanese Pound (Lebanon)"
+msgstr "黎巴嫩镑 (黎巴嫩)"
+
+msgid "Israeli New Shekel (Israel)"
+msgstr "以色列新谢克尔 (以色列)"
+
+# ============================================================
+# includes/Admin/ContactWidgetSettings.php
+# ============================================================
+
+msgid "Customer Service Settings"
+msgstr "在线客服设置"
+
+msgid "Customer Service"
+msgstr "在线客服"
+
+msgid "Security verification failed"
+msgstr "安全验证失败"
+
+msgid "Settings saved."
+msgstr "设置已保存。"
+
+msgid "Domestic Channels"
+msgstr "国内渠道"
+
+msgid "International Channels"
+msgstr "海外渠道"
+
+msgid "Appearance"
+msgstr "外观设置"
+
+msgid "Messages"
+msgstr "留言管理"
+
+msgid "QQ"
+msgstr "QQ"
+
+msgid "Enable"
+msgstr "启用"
+
+msgid "Enable QQ contact"
+msgstr "启用QQ联系"
+
+msgid "Label (e.g. Pre-sales QQ)"
+msgstr "标签 (如: 售前QQ)"
+
+msgid "QQ Number"
+msgstr "QQ号码"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Add QQ Number"
+msgstr "添加QQ号码"
+
+msgid "WeChat"
+msgstr "微信"
+
+msgid "Enable WeChat contact"
+msgstr "启用微信联系"
+
+msgid "WeChat ID"
+msgstr "微信号"
+
+msgid "Displayed for users to scan and add"
+msgstr "展示给用户扫码添加"
+
+msgid "WeChat QR Code"
+msgstr "微信二维码"
+
+msgid "Upload Image"
+msgstr "上传图片"
+
+msgid "WeChat Official Account"
+msgstr "微信公众号"
+
+msgid "Official Account Name"
+msgstr "公众号名称"
+
+msgid "Official Account QR Code"
+msgstr "公众号二维码"
+
+msgid "WeChat Mini Program"
+msgstr "微信小程序"
+
+msgid "Mini Program Name"
+msgstr "小程序名称"
+
+msgid "Mini Program QR Code"
+msgstr "小程序二维码"
+
+msgid "Phone"
+msgstr "电话"
+
+msgid "Enable phone contact"
+msgstr "启用电话联系"
+
+msgid "Sales Phone"
+msgstr "销售电话"
+
+msgid "Sales phone number"
+msgstr "销售电话号码"
+
+msgid "After-sales Phone"
+msgstr "售后电话"
+
+msgid "After-sales phone number"
+msgstr "售后电话号码"
+
+msgid "Tech Support Phone"
+msgstr "技术支持电话"
+
+msgid "Tech support phone number"
+msgstr "技术支持电话号码"
+
+msgid "Email"
+msgstr "邮箱"
+
+msgid "Enable email contact"
+msgstr "启用邮箱联系"
+
+msgid "Email Address"
+msgstr "邮箱地址"
+
+msgid "Contact email"
+msgstr "联系邮箱"
+
+msgid "Contact Form"
+msgstr "留言表单"
+
+msgid "Enable contact form"
+msgstr "启用留言表单"
+
+msgid "When enabled, users can submit messages via the form in the widget panel. Messages will be saved to the database."
+msgstr "启用后，用户可以通过浮标面板中的表单提交留言，留言将保存到数据库。"
+
+msgid "Save Domestic Channel Settings"
+msgstr "保存国内渠道设置"
+
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+msgid "Enable WhatsApp"
+msgstr "启用WhatsApp"
+
+msgid "Number"
+msgstr "号码"
+
+msgid "International format, e.g. +8613800138000"
+msgstr "国际格式，如 +8613800138000"
+
+msgid "Telegram"
+msgstr "Telegram"
+
+msgid "Enable Telegram"
+msgstr "启用Telegram"
+
+msgid "Username"
+msgstr "用户名"
+
+msgid "Without @ symbol"
+msgstr "不含 @ 符号"
+
+msgid "Line"
+msgstr "Line"
+
+msgid "Enable Line"
+msgstr "启用Line"
+
+msgid "Line ID"
+msgstr "Line ID"
+
+msgid "Messenger"
+msgstr "Messenger"
+
+msgid "Enable Messenger"
+msgstr "启用Messenger"
+
+msgid "Facebook Page ID"
+msgstr "Facebook Page ID"
+
+msgid "Facebook Page ID or username"
+msgstr "Facebook Page ID 或用户名"
+
+msgid "Viber"
+msgstr "Viber"
+
+msgid "Enable Viber"
+msgstr "启用Viber"
+
+msgid "Signal"
+msgstr "Signal"
+
+msgid "Enable Signal"
+msgstr "启用Signal"
+
+msgid "Save International Channel Settings"
+msgstr "保存海外渠道设置"
+
+msgid "Top Left"
+msgstr "左上"
+
+msgid "Middle Left"
+msgstr "左中"
+
+msgid "Bottom Left"
+msgstr "左下"
+
+msgid "Top Right"
+msgstr "右上"
+
+msgid "Middle Right"
+msgstr "右中"
+
+msgid "Bottom Right"
+msgstr "右下"
+
+msgid "Chat Bubble"
+msgstr "聊天气泡"
+
+msgid "Headset"
+msgstr "耳机客服"
+
+msgid "Envelope"
+msgstr "信封消息"
+
+msgid "Online Support"
+msgstr "在线支持"
+
+msgid "Widget Position"
+msgstr "浮标位置"
+
+msgid "Widget Icon"
+msgstr "浮标图标"
+
+msgid "Widget Text"
+msgstr "浮标文字"
+
+msgid "e.g. Live Chat"
+msgstr "如: 在线客服"
+
+msgid "Leave empty to hide text"
+msgstr "留空则不显示文字"
+
+msgid "Agent Avatar"
+msgstr "客服头像"
+
+msgid "Agent Name"
+msgstr "客服昵称"
+
+msgid "Welcome Message"
+msgstr "欢迎语"
+
+msgid "Hello! How can we help you?"
+msgstr "您好! 请问有什么可以帮您?"
+
+msgid "Theme Color"
+msgstr "主题颜色"
+
+msgid "Save Appearance Settings"
+msgstr "保存外观设置"
+
+msgid "Message List"
+msgstr "留言列表"
+
+msgid "No messages yet."
+msgstr "暂无留言。"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Name"
+msgstr "姓名"
+
+msgid "Phone"
+msgstr "电话"
+
+msgid "Message"
+msgstr "留言内容"
+
+msgid "Time"
+msgstr "时间"
+
+msgid "View"
+msgstr "查看"
+
+msgid "Message Details"
+msgstr "留言详情"
+
+msgid "Invalid message ID"
+msgstr "无效的留言ID"
+
+msgid "Message not found"
+msgstr "留言不存在"
+
+msgid "Message deleted"
+msgstr "留言已删除"
+
+# ============================================================
+# includes/Frontend/ContactWidget.php
+# ============================================================
+
+msgid "Submitting..."
+msgstr "提交中..."
+
+msgid "Message submitted successfully! We will reply as soon as possible."
+msgstr "留言提交成功! 我们会尽快回复您。"
+
+msgid "Submission failed, please try again later."
+msgstr "提交失败，请稍后重试。"
+
+msgid "Please fill in the required fields"
+msgstr "请填写必填项"
+
+msgid "Leave a Message"
+msgstr "留言给我们"
+
+msgid "Your Name *"
+msgstr "您的姓名 *"
+
+msgid "Email Address *"
+msgstr "邮箱地址 *"
+
+msgid "Phone Number"
+msgstr "联系电话"
+
+msgid "Your Message *"
+msgstr "留言内容 *"
+
+msgid "Submit"
+msgstr "提交留言"
+
+msgid "Submitted too frequently, please try again later"
+msgstr "提交过于频繁，请稍后再试"
+
+msgid "Please fill in your name, email and message"
+msgstr "请填写姓名、邮箱和留言内容"
+
+msgid "Invalid email format"
+msgstr "邮箱格式不正确"
+
+msgid "Message save failed, please try again later"
+msgstr "留言保存失败，请稍后重试"
+
+# ============================================================
+# includes/License/LicenseAdmin.php
+# ============================================================
+
+msgid "License Management"
+msgstr "授权管理"
+
+msgid "License page rendering error:"
+msgstr "授权页面渲染错误:"
+
+msgid "License Activated"
+msgstr "授权已激活"
+
+msgid "License Key:"
+msgstr "授权码:"
+
+msgid "Licensed Site:"
+msgstr "授权站点:"
+
+msgid "Site Usage:"
+msgstr "站点用量:"
+
+msgid "Expires:"
+msgstr "到期时间:"
+
+msgid "days"
+msgstr "天"
+
+msgid "Lifetime"
+msgstr "永久"
+
+msgid "One-Click Upgrade to Premium"
+msgstr "一键升级到付费版"
+
+msgid "Click the button below to automatically download and install premium features. Installation takes about 10-30 seconds."
+msgstr "点击下方按钮自动下载并安装付费版功能，安装大约需要10-30秒。"
+
+msgid "Upgrade to Premium"
+msgstr "升级到付费版"
+
+msgid "Re-verify"
+msgstr "重新验证"
+
+msgid "Are you sure you want to deactivate?"
+msgstr "确认要停用授权?"
+
+msgid "Deactivate License"
+msgstr "停用授权"
+
+msgid "About to download and install premium. Do not close the page during installation. Continue?"
+msgstr "即将下载并安装付费版，安装过程中请勿关闭页面。是否继续?"
+
+msgid "Downloading and installing..."
+msgstr "正在下载并安装..."
+
+msgid "Installation Failed"
+msgstr "安装失败"
+
+msgid "Retry Installation"
+msgstr "重试安装"
+
+msgid "Network Error"
+msgstr "网络错误"
+
+msgid "Premium Running"
+msgstr "付费版运行中"
+
+msgid "Plan:"
+msgstr "套餐:"
+
+msgid "Site:"
+msgstr "站点:"
+
+msgid "Are you sure? Premium features will be unavailable after deactivation."
+msgstr "确认停用? 停用后付费功能将不可用。"
+
+msgid "Activate License"
+msgstr "激活授权"
+
+msgid "Enter the license key from your purchase to unlock premium features."
+msgstr "输入您购买时获得的授权码，解锁付费功能。"
+
+msgid "Format: PCS-P-XXXX-XXXX (Pro) / PCS-E-XXXX-XXXX (Enterprise)"
+msgstr "格式: PCS-P-XXXX-XXXX (专业版) / PCS-E-XXXX-XXXX (企业版)"
+
+msgid "Plans & Features"
+msgstr "套餐与功能对比"
+
+msgid "Choose the plan that fits your business. Free version is available forever."
+msgstr "选择适合您业务的套餐。免费版永久可用。"
+
+msgid "Plan 1"
+msgstr "套餐 1"
+
+msgid "Free"
+msgstr "免费版"
+
+msgid "For startups and small cross-border e-commerce"
+msgstr "适合初创企业和小型跨境电商"
+
+msgid "Base currency + 5 additional currencies"
+msgstr "基准货币 + 5 个其他货币"
+
+msgid "One-click rate fetch (Free API)"
+msgstr "一键获取汇率 (免费API)"
+
+msgid "Manual rate editing"
+msgstr "手动编辑汇率"
+
+msgid "30-hour rate validity"
+msgstr "30小时汇率有效期"
+
+msgid "Currency selector (Product/Cart/Checkout)"
+msgstr "货币选择器 (商品/购物车/结账)"
+
+msgid "Online customer service widget (12+ channels)"
+msgstr "在线客服浮标 (12+ 渠道)"
+
+msgid "Cache compatible (Super Cache/CDN)"
+msgstr "缓存兼容 (Super Cache/CDN)"
+
+msgid "WooCommerce Blocks support"
+msgstr "WooCommerce 区块支持"
+
+msgid "Subscriptions/Bookings compatible"
+msgstr "兼容 Subscriptions/Bookings"
+
+msgid "Unlimited currencies"
+msgstr "无限货币"
+
+msgid "Never-expiring rates"
+msgstr "永不过期汇率"
+
+msgid "GeoIP auto-detection"
+msgstr "GeoIP 自动检测"
+
+msgid "Image watermark / Price rounding"
+msgstr "图片水印 / 价格取整"
+
+msgid "Currently Active"
+msgstr "当前使用"
+
+msgid "Plan 2"
+msgstr "套餐 2"
+
+msgid "Pro"
+msgstr "专业版"
+
+msgid "month"
+msgstr "月"
+
+msgid "$49/year (save 17%)"
+msgstr "$49/年 (省17%)"
+
+msgid "For growing businesses expanding to international markets"
+msgstr "适合拓展国际市场的成长型企业"
+
+msgid "all 206"
+msgstr "全部206种"
+
+msgid "Automatic API rate updates"
+msgstr "自动API汇率更新"
+
+msgid "Custom rates & markups"
+msgstr "自定义汇率和加价"
+
+msgid "Price rounding"
+msgstr "价格取整"
+
+msgid "Image watermark"
+msgstr "图片水印"
+
+msgid "Order analytics dashboard"
+msgstr "订单分析仪表盘"
+
+msgid "Advanced selector styles"
+msgstr "高级选择器样式"
+
+msgid "Country-based pricing"
+msgstr "按国家定价"
+
+msgid "All Free features"
+msgstr "所有免费版功能"
+
+msgid "Order Bump"
+msgstr "订单加购"
+
+msgid "Product pricing management"
+msgstr "商品定价管理"
+
+msgid "Recommended"
+msgstr "推荐"
+
+msgid "Plan 3"
+msgstr "套餐 3"
+
+msgid "Enterprise"
+msgstr "企业版"
+
+msgid "$99/year (save 31%)"
+msgstr "$99/年 (省31%)"
+
+msgid "For large enterprises and cross-border e-commerce service providers"
+msgstr "适合大型企业和跨境电商服务商"
+
+msgid "All Pro features"
+msgstr "所有专业版功能"
+
+msgid "Checkout settlement"
+msgstr "结算管理"
+
+msgid "Priority technical support"
+msgstr "优先技术支持"
+
+msgid "Multi-site support"
+msgstr "多站点支持"
+
+msgid "GeoIP + Country pricing"
+msgstr "GeoIP + 按国家定价"
+
+msgid "Image watermark + Price rounding"
+msgstr "图片水印 + 价格取整"
+
+msgid "Upgrade to Enterprise"
+msgstr "升级到企业版"
+
+msgid "License activated successfully!"
+msgstr "授权激活成功!"
+
+msgid "Activation failed. Please check your license key."
+msgstr "激活失败，请检查授权码。"
+
+msgid "Please enter a license key."
+msgstr "请输入授权码。"
+
+msgid "License deactivated."
+msgstr "授权已停用。"
+
+msgid "License verified successfully!"
+msgstr "授权验证成功!"
+
+msgid "License verification failed."
+msgstr "授权验证失败。"
+
+# ============================================================
+# includes/License/LicenseManager.php
+# ============================================================
+
+msgid "Unlimited"
+msgstr "无限版"
+
+msgid "Activation failed, please check your license key"
+msgstr "激活失败，请检查授权码"
+
+msgid "License activated successfully!"
+msgstr "授权激活成功!"
+
+msgid "No active license found"
+msgstr "没有已激活的授权"
+
+msgid "License deactivated"
+msgstr "授权已停用"
+
+msgid "Server error (HTTP %d)"
+msgstr "服务器错误 (HTTP %d)"
+
+msgid "License verified"
+msgstr "授权验证成功"
+
+msgid "License verification failed"
+msgstr "授权验证失败"
+
+# ============================================================
+# includes/License/PackageInstaller.php
+# ============================================================
+
+msgid "Invalid download URL"
+msgstr "下载地址无效"
+
+msgid "Download failed: "
+msgstr "下载失败: "
+
+msgid "Downloaded file format error"
+msgstr "下载的文件格式错误"
+
+msgid "Package format incorrect"
+msgstr "安装包格式不正确"
+
+msgid "Installation failed: "
+msgstr "安装失败: "
+
+msgid "Upgrade complete! Refreshed to premium version."
+msgstr "升级完成! 已刷新为付费版。"
+
+msgid "Failed to get download link"
+msgstr "获取下载链接失败"
+
+# ============================================================
+# includes/Core/WooCommerceIntegration.php
+# ============================================================
+
+msgid "Order Currency"
+msgstr "订单货币"
+
+msgid "Rate: 1 %s = %s %s (%s)"
+msgstr "汇率: 1 %s = %s %s (%s)"
+
+msgid "Order Currency: %s %s (%s)"
+msgstr "订单货币: %s %s (%s)"
+
+# ============================================================
+# includes/Frontend/CurrencySelector.php
+# ============================================================
+
+msgid "Currency:"
+msgstr "货币:"
+
+# ============================================================
+# includes/Core/CacheCompatHandler.php
+# ============================================================
+
+msgid "Invalid price data"
+msgstr "无效的价格数据"
