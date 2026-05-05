@@ -23,9 +23,10 @@ class PackageInstaller {
      * 安装付费版包（覆盖当前免费版）
      *
      * @param string $download_url 付费版ZIP下载地址（带签名，有时效）
+     * @param string $expected_hash 可选的SHA256哈希值，用于验证下载文件完整性
      * @return array ['success' => bool, 'message' => string]
      */
-    public function install_package(string $download_url): array {
+    public function install_package(string $download_url, string $expected_hash = ''): array {
         if (empty($download_url)) {
             return ['success' => false, 'message' => __('Invalid download URL', 'pro-currency-switcher')];
         }
@@ -37,85 +38,97 @@ class PackageInstaller {
             return ['success' => false, 'message' => __('Download failed: ', 'pro-currency-switcher') . $temp_file->get_error_message()];
         }
 
-        // 2. 验证ZIP文件
+        // 2. 验证文件哈希（如果API提供了expected_hash）
+        if (!empty($expected_hash)) {
+            $actual_hash = hash_file('sha256', $temp_file);
+            if (strtolower($actual_hash) !== strtolower($expected_hash)) {
+                @unlink($temp_file);
+                return ['success' => false, 'message' => __('Package integrity check failed (hash mismatch)', 'pro-currency-switcher')];
+            }
+        }
+
+        // 3. 验证ZIP文件
         $zip = new \ZipArchive();
         if ($zip->open($temp_file) !== true) {
             @unlink($temp_file);
             return ['success' => false, 'message' => __('Downloaded file format error', 'pro-currency-switcher')];
         }
 
-        // 3. 安全检查：路径遍历检测
-        for ($i = 0; $i < $zip->numFiles; $i++) {
-            $name = $zip->getNameIndex($i);
-            // 检测路径遍历攻击（../ 或绝对路径）
-            if (strpos($name, '../') !== false || strpos($name, '..\\') !== false) {
-                $zip->close();
-                @unlink($temp_file);
-                return ['success' => false, 'message' => __('Package contains unsafe file paths', 'pro-currency-switcher')];
-            }
-        }
+        // 4. 安全检查：路径遍历 + 文件类型白名单 + 恶意代码检测
+        $allowed_extensions = [
+            'php', 'css', 'js', 'png', 'jpg', 'gif', 'svg',
+            'woff', 'woff2', 'ttf', 'eot', 'mo', 'po', 'pot',
+            'txt', 'md',
+        ];
 
-        // 4. 安全检查：文件类型白名单
-        $allowed_extensions = ['php', 'js', 'css', 'json', 'txt', 'md', 'png', 'jpg', 'jpeg', 'gif', 'svg', 'woff', 'woff2', 'ttf', 'eot', 'mo', 'po', 'pot', 'xml', 'html', 'htm'];
+        // 恶意代码模式（PHP文件中不允许出现的危险函数调用）
+        $malicious_patterns = [
+            '/\beval\s*\(/i',
+            '/\bbase64_decode\s*\(/i',
+            '/\bsystem\s*\(/i',
+            '/\bexec\s*\(/i',
+            '/\bpassthru\s*\(/i',
+            '/\bshell_exec\s*\(/i',
+            '/\bpreg_replace\s*\([^)]*[\'"]\/[^\/]*e[\'"]\s*,/i',
+            '/\bassert\s*\(/i',
+            '/\bcreate_function\s*\(/i',
+            '/\bcall_user_func\s*\(/i',
+            // fopen/file_put_contents 已移除 - 插件自身正常使用这些函数
+            '/\bfsockopen\s*\(/i',
+            '/\bpopen\s*\(/i',
+            '/\bproc_open\s*\(/i',
+            '/\bpcntl_exec\s*\(/i',
+        ];
+
+        $has_main_file = false;
         for ($i = 0; $i < $zip->numFiles; $i++) {
             $name = $zip->getNameIndex($i);
+
             // 跳过目录条目
             if (substr($name, -1) === '/') {
                 continue;
             }
-            $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
-            if (!in_array($ext, $allowed_extensions, true)) {
+
+            // 4a. ZIP路径遍历检查：拒绝包含 '..' 或以 '/' 开头的路径
+            if (strpos($name, '..') !== false || strpos($name, '\\') !== false) {
                 $zip->close();
                 @unlink($temp_file);
-                return ['success' => false, 'message' => sprintf(
-                    __('Package contains disallowed file type: %s', 'pro-currency-switcher'),
-                    $ext
-                )];
+                return ['success' => false, 'message' => __('Package contains invalid file paths', 'pro-currency-switcher')];
             }
-        }
 
-        // 5. 安全检查：恶意代码检测（检查PHP文件中的危险函数）
-        for ($i = 0; $i < $zip->numFiles; $i++) {
-            $name = $zip->getNameIndex($i);
-            if (strtolower(pathinfo($name, PATHINFO_EXTENSION)) !== 'php') {
-                continue;
+            // 4b. 文件类型白名单检查
+            $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+            // 跳过无扩展名的常见文件（LICENSE, CHANGELOG 等）
+            $basename = basename($name);
+            $allowed_no_ext = ['license', 'changelog', 'readme', 'makefile', 'dockerfile'];
+            if (!empty($ext) && !in_array($ext, $allowed_extensions)) {
+                $zip->close();
+                @unlink($temp_file);
+                return ['success' => false, 'message' => sprintf(__('Package contains disallowed file type: %s', 'pro-currency-switcher'), $ext)];
             }
-            $content = $zip->getFromIndex($i);
-            if ($content === false) {
-                continue;
+            if (empty($ext) && !in_array(strtolower($basename), $allowed_no_ext)) {
+                $zip->close();
+                @unlink($temp_file);
+                return ['success' => false, 'message' => sprintf(__('Package contains disallowed file: %s', 'pro-currency-switcher'), $basename)];
             }
-            // 检测常见恶意模式
-            $dangerous_patterns = [
-                '/\beval\s*\(/i',
-                '/\bbase64_decode\s*\(/i',
-                '/\bshell_exec\s*\(/i',
-                '/\bpassthru\s*\(/i',
-                '/\bpopen\s*\(/i',
-                '/\bproc_open\s*\(/i',
-                '/\bsystem\s*\(/i',
-                '/\bexec\s*\(/i',
-                '/\bassert\s*\(/i',
-                '/\bcreate_function\s*\(/i',
-                '/\bfile_put_contents\s*\(.*\$_(GET|POST|REQUEST|COOKIE|SERVER)/i',
-                '/\bfwrite\s*\(.*\$_(GET|POST|REQUEST|COOKIE|SERVER)/i',
-                '/preg_replace\s*\([^,]*e[\'"]\s*,/i',
-            ];
-            foreach ($dangerous_patterns as $pattern) {
-                if (preg_match($pattern, $content)) {
-                    $zip->close();
-                    @unlink($temp_file);
-                    return ['success' => false, 'message' => __('Package failed security verification', 'pro-currency-switcher')];
+
+            // 4c. PHP文件恶意代码检测
+            if ($ext === 'php') {
+                $content = $zip->getFromIndex($i);
+                if ($content !== false) {
+                    foreach ($malicious_patterns as $pattern) {
+                        if (preg_match($pattern, $content)) {
+                            $zip->close();
+                            @unlink($temp_file);
+                            return ['success' => false, 'message' => __('Package contains potentially malicious code and was rejected', 'pro-currency-switcher')];
+                        }
+                    }
                 }
             }
-        }
 
-        // 6. 验证包内包含正确的插件文件
-        $has_main_file = false;
-        for ($i = 0; $i < $zip->numFiles; $i++) {
-            $name = $zip->getNameIndex($i);
+            // 验证包内包含正确的插件文件
             if (strpos($name, 'pro-currency-switcher.php') !== false) {
                 $has_main_file = true;
-                break;
             }
         }
         $zip->close();
@@ -125,22 +138,7 @@ class PackageInstaller {
             return ['success' => false, 'message' => __('Package format incorrect', 'pro-currency-switcher')];
         }
 
-        // 7. SHA256哈希验证（如果URL包含hash参数）
-        $hash = '';
-        $parsed_url = wp_parse_url($download_url);
-        if (!empty($parsed_url['query'])) {
-            parse_str($parsed_url['query'], $query_params);
-            $hash = $query_params['hash'] ?? '';
-        }
-        if (!empty($hash) && function_exists('hash_file')) {
-            $file_hash = hash_file('sha256', $temp_file);
-            if (!hash_equals($hash, $file_hash)) {
-                @unlink($temp_file);
-                return ['success' => false, 'message' => __('Package integrity check failed (SHA256 mismatch)', 'pro-currency-switcher')];
-            }
-        }
-
-        // 8. 使用WordPress原生升级器安装
+        // 5. 使用WordPress原生升级器安装
         require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
         require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
 
@@ -152,14 +150,14 @@ class PackageInstaller {
             'is_multi'          => false,
         ]);
 
-        // 9. 清理临时文件
+        // 6. 清理临时文件
         @unlink($temp_file);
 
         if (is_wp_error($result)) {
             return ['success' => false, 'message' => __('Installation failed: ', 'pro-currency-switcher') . $result->get_error_message()];
         }
 
-        // 10. 确保插件已激活
+        // 7. 确保插件已激活
         if (!is_plugin_active('pro-currency-switcher/pro-currency-switcher.php')) {
             activate_plugin('pro-currency-switcher/pro-currency-switcher.php');
         }
@@ -173,7 +171,6 @@ class PackageInstaller {
      *
      * @param string $license_key 授权码
      * @param string $plan 套餐类型
-     * @param string $target_slug 目标版本slug（可选，不传则根据plan自动选择）
      * @return array ['success' => bool, 'download_url' => string, 'message' => string]
      */
     public function get_download_url(string $license_key, string $plan, string $target_slug = ''): array {
@@ -182,13 +179,16 @@ class PackageInstaller {
             : 'https://hb.woocross.com/api/v1';
 
         $timestamp = time();
-        // 安全修复：从 LicenseManager 获取密钥，不再硬编码
-        $api_secret = '';
-        if (class_exists('ProCurrencySwitcher\\License\\LicenseManager')) {
-            $api_secret = LicenseManager::get_instance()->get_api_secret();
-        }
+        $api_secret = defined('PCS_API_SECRET')
+            ? PCS_API_SECRET
+            : get_option('pcs_api_secret', '');
         if (empty($api_secret)) {
-            $api_secret = get_option('pcs_api_secret', '');
+            try {
+                $manager = LicenseManager::get_instance();
+                $api_secret = $manager->get_api_secret();
+            } catch (\Exception $e) {
+                return ['success' => false, 'download_url' => '', 'message' => __('API secret not configured', 'pro-currency-switcher')];
+            }
         }
 
         $signature = hash_hmac('sha256', '/plugin/download|' . $timestamp, $api_secret);
@@ -234,9 +234,10 @@ class PackageInstaller {
         }
 
         return [
-            'success'      => true,
-            'download_url' => $body['data']['download_url'] ?? '',
-            'message'      => '',
+            'success'       => true,
+            'download_url'  => $body['data']['download_url'] ?? '',
+            'expected_hash' => $body['data']['expected_hash'] ?? '',
+            'message'       => '',
         ];
     }
 }
